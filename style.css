@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Noto Sans Tamil','Latha',Arial,sans-serif;
+  color:#17213b;
+  background:#0a79b9;
+}
+.page{
+  min-height:100vh;
+  position:relative;
+  background-image:url("background.png");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  padding:32px 15px 45px;
+}
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,34,75,.22);
+  z-index:0;
+}
+.quiz-box{
+  position:relative;
+  z-index:1;
+  width:min(1050px,100%);
+  margin:auto;
+  padding:25px;
+  border-radius:28px;
+  background:rgba(255,255,255,.93);
+  box-shadow:0 20px 55px rgba(0,20,55,.28);
+  backdrop-filter:blur(5px);
+}
+.top{
+  text-align:center;
+  padding:10px 10px 18px;
+}
+.lesson{
+  display:inline-block;
+  padding:7px 18px;
+  border-radius:25px;
+  color:white;
+  background:linear-gradient(135deg,#0868d8,#0aa6a6);
+  font-weight:800;
+}
+h1{
+  margin:13px 0 7px;
+  color:#064a92;
+  font-size:clamp(25px,4vw,38px);
+  line-height:1.35;
+}
+.instruction{margin:0;color:#5b6477}
+.progress-area{
+  padding:15px 18px;
+  background:#f4f8ff;
+  border-radius:16px;
+  margin:5px 0 20px;
+}
+.progress-label{
+  display:flex;
+  justify-content:space-between;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.progress{
+  height:10px;
+  background:#dce6f3;
+  border-radius:20px;
+  overflow:hidden;
+}
+#progressBar{
+  width:0;
+  height:100%;
+  background:linear-gradient(90deg,#0878df,#08b79c);
+  transition:width .3s;
+}
+.question{
+  background:white;
+  border:2px solid #e6edf6;
+  border-radius:18px;
+  padding:19px;
+  margin:15px 0;
+  transition:.2s;
+}
+.question:hover{border-color:#8ac5ee;box-shadow:0 7px 18px rgba(20,100,170,.08)}
+.q-title{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.q-title>span{
+  min-width:42px;height:42px;
+  display:grid;place-items:center;
+  color:white;background:linear-gradient(135deg,#076fd5,#00a99a);
+  border-radius:50%;font-weight:800;
+}
+.q-title p{
+  margin:2px 0 14px;
+  font-size:18px;
+  font-weight:600;
+  line-height:1.75;
+}
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.options label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-height:52px;
+  padding:10px 13px;
+  border:2px solid #e9eef5;
+  border-radius:12px;
+  cursor:pointer;
+  background:#fbfdff;
+  transition:.18s;
+}
+.options label:hover{
+  border-color:#28a9bd;
+  background:#f0fbff;
+  transform:translateY(-1px);
+}
+.options input{
+  width:18px;height:18px;accent-color:#0878d9;
+}
+.options label span{font-weight:800;color:#086fbd}
+.submit-btn,.retry{
+  display:block;
+  margin:25px auto 8px;
+  border:0;
+  padding:15px 34px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#075fd1,#00a991);
+  color:white;
+  font-family:inherit;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 9px 22px rgba(0,105,190,.25);
+  transition:.2s;
+}
+.submit-btn:hover,.retry:hover{transform:translateY(-2px);box-shadow:0 12px 27px rgba(0,105,190,.35)}
+.result{
+  text-align:center;
+  margin-top:25px;
+  padding:28px 20px;
+  border-radius:20px;
+  background:#f5fbff;
+  border:2px solid #d8edf4;
+}
+.hidden{display:none}
+.emoji{font-size:55px}
+.result h2{font-size:28px;margin:5px 0}
+.score{font-size:44px;font-weight:800;color:#0871c8}
+#remarks{font-size:18px;font-weight:600}
+.review{
+  max-width:700px;
+  margin:18px auto;
+  text-align:left;
+}
+.review-item{
+  padding:11px 14px;
+  margin:8px 0;
+  border-radius:10px;
+}
+.good{background:#e8f8ee;color:#116d3b}
+.bad{background:#fff0f0;color:#a12b2b}
+footer{
+  text-align:center;
+  margin-top:24px;
+  color:#596578;
+  font-size:14px;
+}
+footer strong{color:#075fa8}
+@media(max-width:680px){
+  .page{padding:12px 8px 25px}
+  .quiz-box{padding:14px;border-radius:20px}
+  .options{grid-template-columns:1fr}
+  .q-title p{font-size:16px}
+  .question{padding:15px}
+}

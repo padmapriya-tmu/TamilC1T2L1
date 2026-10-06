@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>காவல்காரர் | தமிழ் வினாடி வினா</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="overlay"></div>
+
+    <section class="quiz-box">
+      <div class="top">
+        <div class="lesson">📚 பாடம் : காவல்காரர்</div>
+        <h1>சரியான சொல்லைத் தெரிவு செய்து எழுதுவோமா?</h1>
+        <p class="instruction">ஒவ்வொரு வினாவிற்கும் சரியான விடையைத் தேர்ந்தெடுக்கவும்.</p>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span>முன்னேற்றம்</span>
+          <span id="progressText">0 / 5</span>
+        </div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+
+      <form id="quizForm">
+        <div class="question">
+          <div class="q-title"><span>01</span><p>'பெயரில்லாத' இச்சொல்லைப் பிரித்து எழுத்துக் கிடைப்பது ___________</p></div>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"><span>அ)</span> பெயர் + இலாத</label>
+            <label><input type="radio" name="q1" value="b"><span>ஆ)</span> பெயர் + இல்லாத</label>
+            <label><input type="radio" name="q1" value="c"><span>இ)</span> பெயரில் + இல்லாத</label>
+            <label><input type="radio" name="q1" value="d"><span>ஈ)</span> பெயரோ + இல்லாத</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-title"><span>02</span><p>வைக்கோல் <u>மேலே</u> துணியைச் சுற்றி வைத்திருக்கும் பொம்மை. இத்தொடரில் அடிக்கோடிட்ட சொல்லின் எதிர்ச்சொல் _________</p></div>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"><span>அ)</span> கீழே</label>
+            <label><input type="radio" name="q2" value="b"><span>ஆ)</span> அருகில்</label>
+            <label><input type="radio" name="q2" value="c"><span>இ)</span> தொலைவில்</label>
+            <label><input type="radio" name="q2" value="d"><span>ஈ)</span> வளைவில்</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-title"><span>03</span><p>'சோளக்கொல்லைப் பொம்மை' என்பது __________</p></div>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"><span>அ)</span> உயிருள்ள பொருள்</label>
+            <label><input type="radio" name="q3" value="b"><span>ஆ)</span> உயிரற்ற பொருள்</label>
+            <label><input type="radio" name="q3" value="c"><span>இ)</span> இயற்கையானது</label>
+            <label><input type="radio" name="q3" value="d"><span>ஈ)</span> மனிதன் செய்ய இயலாதது</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-title"><span>04</span><p><strong>அசையா + இல்லை</strong> – இச்சொற்களைச் சேர்த்து எழுத்துக் கிடைப்பது _________</p></div>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"><span>அ)</span> அசைய இல்லை</label>
+            <label><input type="radio" name="q4" value="b"><span>ஆ)</span> அசைவில்லை</label>
+            <label><input type="radio" name="q4" value="c"><span>இ)</span> அசையவில்லைய</label>
+            <label><input type="radio" name="q4" value="d"><span>ஈ)</span> அசையில்லை</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <div class="q-title"><span>05</span><p><strong>நித்தம்</strong> – இச்சொல்லுக்குரிய பொருள் __________</p></div>
+          <div class="options">
+            <label><input type="radio" name="q5" value="a"><span>அ)</span> நாளும்</label>
+            <label><input type="radio" name="q5" value="b"><span>ஆ)</span> இப்பொழுதும்</label>
+            <label><input type="radio" name="q5" value="c"><span>இ)</span> நேற்றும்</label>
+            <label><input type="radio" name="q5" value="d"><span>ஈ)</span> எப்பொழுதும்</label>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit">✓ விடைகளைச் சமர்ப்பிக்க</button>
+      </form>
+
+      <section id="result" class="result hidden">
+        <div id="emoji" class="emoji">🏆</div>
+        <h2 id="resultTitle"></h2>
+        <div class="score"><span id="score">0</span> / 5</div>
+        <p id="remarks"></p>
+        <div id="review"></div>
+        <button class="retry" id="retry" type="button">↻ மீண்டும் முயற்சி செய்க</button>
+      </section>
+
+      <footer>Created by <strong>Mrs. P.PADMA PRIYA M.C.A, B.ED.</strong></footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
